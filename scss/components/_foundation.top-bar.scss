@@ -11,12 +11,12 @@ nav.top-bar {
     	margin: rem-calc(0 40);
         &:after {
             display: block;
-            height: 5px;
+            height: 3px;
             background-color: $primary-color;
             content: "";
             width: 0%;
             margin: 0 auto;
-            margin-top: -5px;
+            margin-top: -3px;
             -webkit-transition: all .25s ease-out;
         }
         &:hover, {

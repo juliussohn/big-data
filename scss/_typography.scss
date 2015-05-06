@@ -1,10 +1,20 @@
+.begriff {
+	text-align: center;
+}
+
+.begriff .section-text {
+	margin: 0 20%;
+}
+
 .section-headline {
+	font-size: 3em;
 	color: #BA2D0B;
-	padding-top: 80px;
+	padding-top: 60px;
 	margin-bottom: 30px;
 }
 
-section p {
-	width: 50%;
+.section-text {
+	font-size: 1.2em;
+	text-align: left;
 	color: #767676;
 }
