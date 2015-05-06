@@ -1,6 +1,6 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
-$(document).foundation();
+
 
 $(document).ready(function(){
 	resizeWindow()
@@ -41,7 +41,7 @@ function createCanvas(){
     canvas.height        = 2000;
     canvas.style.display = 'block';
 
-    ctx.fillStyle = color;
+    ctx.fillStyle = "#5595C2";
     ctx.lineWidth = 0.1;
     ctx.strokeStyle = color;
 
@@ -65,6 +65,7 @@ function createCanvas(){
 
         this.vx = -.5 + Math.random();
         this.vy = -.5 + Math.random();
+        
 
         this.radius = Math.random()*7;
     }
@@ -140,4 +141,6 @@ function createCanvas(){
             mousePosition.y = canvas.height / 2;
         }
     });
+    $(document).foundation();
 };
+

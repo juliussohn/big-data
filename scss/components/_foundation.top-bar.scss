@@ -1,0 +1,16 @@
+nav.top-bar {
+text-align:center;
+padding: 0;
+}
+.top-bar-section {
+display: inline-block;
+	li:after{
+		display: block;
+		height: 5px;
+		background-color: $primary-color;
+		content:"";
+		width: 50%;
+		margin: 0 auto;
+		margin-top: -5px;
+	}
+}
