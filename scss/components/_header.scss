@@ -1,8 +1,17 @@
 .header{
-	background-color: rgb(45,45,50);
+	background-color: #151E3F;
 
-	h1{
+	h1, h2{
 		color: white;
+		text-shadow: 0px 0px 40px rgba(0,0,0,0.3);
+	}
+
+	h2 {
+		letter-spacing: 3.3px;
+		margin-top: -60px;
+	}
+
+	.headline {
 		position:absolute; 
 		text-align:center; 
 		width:100%; top:35%; 
