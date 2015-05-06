@@ -8,40 +8,6 @@ $(document).ready(function(){
 	$(window).resize(function(){
 		resizeWindow();
 	})
-	/* $(".test").Geometryangle({
-	 	mesh:{
-	 		
-	 		depth:0,
-	 		ambient: "rgba(15,15,15,1)",
-            diffuse: "rgba(15,15,15,1)",
-            background: "rgba(15,15,15,1)",
-            xRange:.8,
-            yRange:1,
-            columns:20,
-            rows:20
-	 	}, 
-	 	lights: [{
-	 		ambient: 'rgba(255,255,255, 1)',
-            diffuse: 'rgba(50,50,50,1)',
-	 	}], 
-	 	line: {
-	 		fill:"rgba(240,100,30,1)",
-	 		thickness: 3,
-	 		draw:true
-	 	}, 
-	 	vertex: {
-	 		radius:10,
-	 		fill: "rgba(0,0,0,0)",
-
-	 	}}
-	 );*/
-
-// Dots and lines
-
-
-
-
-
 })
 
 function resizeWindow(){
@@ -76,14 +42,14 @@ function createCanvas(){
     canvas.style.display = 'block';
 
     ctx.fillStyle = color;
-    ctx.lineWidth = .1;
+    ctx.lineWidth = 0.1;
     ctx.strokeStyle = color;
 
 
-    var meshFactor = 1.1,
+    var meshFactor = 1,
     	dots = {
 	    	nb: 400*meshFactor,
-	    	distance:120*meshFactor,
+	    	distance:150*meshFactor,
 	    	d_radius:350*meshFactor,
 	    	array: [],
     	}
@@ -100,7 +66,7 @@ function createCanvas(){
         this.vx = -.5 + Math.random();
         this.vy = -.5 + Math.random();
 
-        this.radius = Math.random()*10;
+        this.radius = Math.random()*7;
     }
 
     Dot.prototype = {
@@ -136,7 +102,7 @@ function createCanvas(){
 
                     if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
                         if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-                            ctx.lineWidth = 1.5;
+                            ctx.lineWidth = 0.3;
                             ctx.beginPath();
                             ctx.moveTo(i_dot.x, i_dot.y);
                             ctx.lineTo(j_dot.x, j_dot.y);

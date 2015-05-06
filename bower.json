@@ -5,6 +5,7 @@
   "dependencies": {
     "foundation": "zurb/bower-foundation",
     "jquery-knob": "~1.2.11",
-    "Geometryangle": "TritonCode/Geometryangle"
+    "Geometryangle": "TritonCode/Geometryangle",
+    "scrollme": "nckprsn/scrollme#~1.1.0"
   }
 }
