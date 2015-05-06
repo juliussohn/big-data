@@ -1,16 +1,38 @@
 nav.top-bar {
-text-align:center;
-padding: 0;
+    text-align: center;
+    padding: 0;
+  
 }
+
 .top-bar-section {
-display: inline-block;
-	li:after{
-		display: block;
-		height: 5px;
-		background-color: $primary-color;
-		content:"";
-		width: 50%;
-		margin: 0 auto;
-		margin-top: -5px;
-	}
+    display: inline-block;
+    li {
+    	margin: rem-calc(0 40);
+        &:after {
+            display: block;
+            height: 5px;
+            background-color: $primary-color;
+            content: "";
+            width: 0%;
+            margin: 0 auto;
+            margin-top: -5px;
+            -webkit-transition: all .4s ease-out;
+        }
+        &:hover, {
+            &:after {
+                width: 100%;
+            }
+        }
+        &.active, {
+            &:after {
+                width: 100%;
+            }
+        }
+        a {
+            letter-spacing: 2px;
+            -webkit-transition: all .4s ease-out;
+            * {-webkit-font-smoothing: antialiased}
+
+        }
+    }
 }

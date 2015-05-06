@@ -31,7 +31,7 @@ function createCanvas(){
     var    canvas = $('<canvas></canvas>').appendTo(header)[0],
 
         ctx    = canvas.getContext('2d'),
-        color  = '#6BB9F0',
+        color  = '#4D7EA8',
         colors = [
 
         ]
