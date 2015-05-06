@@ -1,6 +1,7 @@
 nav.top-bar {
     text-align: center;
     padding: 0;
+    box-shadow: 0 1px 0px rgba(0,0,0,.1)
   
 }
 
@@ -16,7 +17,7 @@ nav.top-bar {
             width: 0%;
             margin: 0 auto;
             margin-top: -5px;
-            -webkit-transition: all .4s ease-out;
+            -webkit-transition: all .25s ease-out;
         }
         &:hover, {
             &:after {

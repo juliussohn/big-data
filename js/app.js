@@ -4,28 +4,63 @@ $(document).ready(function() {
     $(window).resize(function() {
         resizeWindow();
     })
-    $(".graph-1").knob({
+   /* var graph_1 = $(".graph-1").knob({
         min: 0,
-        max: 100 ,
-        value: 0
+        max: 100,
+        val:50 
     });
+
+    $(".increase-button").click(function() {
+		var to = graph_1.val();
+		  for( v=0; v<=to; v++ ){
+		    graph_1.val( v ).trigger( 'change' );
+		    console.log( v );
+		    setTimeout(100);
+		  }
+		
+	})*/
+var ctx = $("#myChart").get(0).getContext("2d");
+// This will get the first returned node in the jQuery collection.
+
+
+var data = [
+    {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+    },
+    {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+    },
+    {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+    }
+]
+
+var myDoughnutChart = new Chart(ctx).Doughnut(data);
 
 });
 
 
 
-	/*$(".increase-button").click(function() {
 
-		var from = $(".graph-1").val(),
-			to = $(this).data("productivity-increase");
-			console.log(from)
-		for(var i=from; i>to; i++){
-			console.log(i)
-			$(".graph-1").val(i).trigger('change');
-		}
-		
-	})*/
 
+
+$('#anim').on( 'click',function(){
+  var to = dial.val();
+  for( v=0; v<=to; v++ ){
+    dial.val( v ).trigger( 'change' );
+    console.log( v );
+    setTimeout(100);
+  }
+});
 
 
 
