@@ -4,7 +4,36 @@ $(document).ready(function() {
     $(window).resize(function() {
         resizeWindow();
     })
-})
+    $(".graph-1").knob({
+        min: 0,
+        max: 100 ,
+        value: 0
+    });
+
+});
+
+
+
+	/*$(".increase-button").click(function() {
+
+		var from = $(".graph-1").val(),
+			to = $(this).data("productivity-increase");
+			console.log(from)
+		for(var i=from; i>to; i++){
+			console.log(i)
+			$(".graph-1").val(i).trigger('change');
+		}
+		
+	})*/
+
+
+
+
+
+
+
+
+
 
 function resizeWindow() {
 
