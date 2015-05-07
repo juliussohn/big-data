@@ -29,7 +29,7 @@ $(document).ready(function() {
 
     options = {
         segmentShowStroke: false,
-        percentageInnerCutout: 80, // This is 0 for Pie charts
+        percentageInnerCutout: 78, // This is 0 for Pie charts
         animationSteps: 60,
         animationEasing: "easeOutQuart",
         animateRotate: true,
