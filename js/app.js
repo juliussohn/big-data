@@ -1,4 +1,4 @@
-var color_1 = "#4D7EA8" 
+var color_1 = "#4D7EA8"
 
 var myDoughnutChart;
 $(document).ready(function() {
@@ -7,16 +7,56 @@ $(document).ready(function() {
     $(window).resize(function() {
         resizeWindow();
     })
- 
+    createIconChart();
+    data_counter = setInterval(dataCounter, 1000 / 15);
+    $(".toggle-menu a").click(function(e) {
+        e.preventDefault();
+        $(this).closest(".top-bar").toggleClass("expanded");
+    })
+
+});
+
+
+
+
+function resizeWindow() {
+
+    wh = $(window).height();
+    ww = $(window).width();
+    tbh = $(".top-bar").height();
+    $(".header").height(wh - tbh);
+    $(".header").width(ww)
+
+   
+}
+
+function dataCounter(){
+    var eb_data_amount = 7975,
+        eb_data_per_year = 4604,
+        from_date = 1431041857294,
+        now_date = $.now(),
+        gb_convert_factor = 1000000000, // GB
+        sec_diff = now_date - from_date,
+        eb_data_per_second = eb_data_per_year / 365 / 24 / 60 / 60 / 1000
+        eb_new_data_amount = eb_data_amount + sec_diff * eb_data_per_second,
+        gb_new_data_amount = eb_new_data_amount* gb_convert_factor;
+
+
+       $(".data_counter").text(Math.ceil(gb_new_data_amount)+" GB");
+
+        
+
+}
+
+function createIconChart() {
     var ctx = $("#pi_chart").get(0).getContext("2d");
     var ctx2 = $("#si_chart").get(0).getContext("2d");
-
     var data_pi = [{
         value: 0,
         color: color_1,
     }, {
         value: 100,
-        color: "#2E3C55", 
+        color: "#2E3C55",
     }];
 
     var data_si = [{
@@ -34,48 +74,31 @@ $(document).ready(function() {
         animationEasing: "easeOutQuart",
         animateRotate: true,
         animateScale: false,
-        showTooltips:false,
+        showTooltips: false,
         legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
     }
 
     pi_chart = new Chart(ctx).Doughnut(data_pi, options);
     si_chart = new Chart(ctx2).Doughnut(data_si, options);
+    
+    $(".increase-button").click(function() {
+        $(".icon-grid a").removeClass("active");
+        $(this).addClass("active");
+        pi = parseInt($(this).data("productivity-increase"));
+        pi_chart.segments[0].value = pi;
+        pi_chart.segments[1].value = 100 - pi;
+        pi_chart.update();
+        $(".pi-number span").html("+" + pi + " %")
+
+        si = ($(this).data("sales-increase"));
+        si_chart.segments[0].value = si;
+        si_chart.segments[1].value = 10 - si;
+        si_chart.update();
+        $(".si-number span").html("+" + si + " $")
+    })
     $(".icon-chart a.first").trigger("click");
 
-});
-
-$(".increase-button").click(function() {
-	$(".icon-grid a").removeClass("active");
-	$(this).addClass("active");
-	pi = parseInt($(this).data("productivity-increase"));
-    pi_chart.segments[0].value = pi;
-    pi_chart.segments[1].value = 100-pi;
-    pi_chart.update();
-    $(".pi-number span").html("+"+pi+" %")
-
-    si = ($(this).data("sales-increase"));
-    si_chart.segments[0].value = si;
-    si_chart.segments[1].value = 10-si;
-    si_chart.update();
-    $(".si-number span").html("+"+si+" $")
-})
-$(".toggle-menu a").click(function(e){
-    e.preventDefault();
-    $(this).closest(".top-bar").toggleClass("expanded");
-})
-
-
-function resizeWindow() {
-
-    wh = $(window).height();
-    ww = $(window).width();
-    tbh = $(".top-bar").height();
-    $(".header").height(wh-tbh);
-    $(".header").width(ww)
-
-
 }
-
 
 function createCanvas() {
     // based on http://codepen.io/dleatherman/pen/kAzgw
