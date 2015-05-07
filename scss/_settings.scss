@@ -118,15 +118,15 @@ $font-weight-normal: 400;
 // We use these as default colors throughout
  $primary-color: #4D7EA8;
  $dark-grey: #C3C3C3;
- $secondary-color: #BA2D0B;
+ $secondary-color: #D1340D;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
  
 // We use these to control various global styles
- $body-bg: white;
-$body-font-color: #333333;
+ $body-bg: #262B3F;
+$body-font-color: white;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -238,7 +238,7 @@ $h1-font-size: rem-calc(180);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
- $subheader-font-color: $dark-grey;
+ $subheader-font-color: rgba(255,255,255, 0.65);
 // $subheader-font-weight: $font-weight-normal;
  $subheader-top-margin: rem-calc(-40);
  $subheader-bottom-margin: rem-calc(40);
@@ -1424,7 +1424,7 @@ $h1-font-size: rem-calc(180);
  $topbar-link-bg-hover: $topbar-bg;
  $topbar-link-bg-color-hover: $topbar-bg;
  $topbar-link-bg-active: $topbar-bg;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+ $topbar-link-bg-active-hover: $topbar-bg;
  $topbar-link-font-family: "Bebas Neue","bebas-neue";
  $topbar-link-text-transform: uppercase;
  $topbar-link-padding: 0;

@@ -16,7 +16,7 @@ $(document).ready(function() {
         color: color_1,
     }, {
         value: 100,
-        color: "#eeeeee",
+        color: "#2E3C55",
     }];
 
     var data_si = [{
@@ -24,7 +24,7 @@ $(document).ready(function() {
         color: "#BA2D0B",
     }, {
         value: 10,
-        color: "#eeeeee",
+        color: "#452B34",
     }];
 
     options = {
@@ -35,7 +35,7 @@ $(document).ready(function() {
         animateRotate: true,
         animateScale: false,
         showTooltips:false,
-        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
     }
 
     pi_chart = new Chart(ctx).Doughnut(data_pi, options);
