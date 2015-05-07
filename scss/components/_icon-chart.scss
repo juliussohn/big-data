@@ -19,7 +19,7 @@
 	#si_chart{
 		position: absolute;
 		left: 100px;
-		top:50px;
+		top:50px; 
 	}
 
 }
@@ -36,6 +36,7 @@
 	}
 	.pi-number{
 		color:$primary-color;
+		margin-bottom: -10px;
 	}
 		span{
 			font-family: "Bebas Neue", "bebas-neue";

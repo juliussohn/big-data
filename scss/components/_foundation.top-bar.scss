@@ -8,25 +8,32 @@ nav.top-bar {
 .top-bar-section {
     display: inline-block;
     li {
+        position: relative;
     	margin: rem-calc(0 40);
         &:after {
+            position: absolute;
+            top: 0px;
             display: block;
-            height: 3px;
+            height: 5px;
             background-color: $primary-color;
             content: "";
             width: 0%;
             margin: 0 auto;
-            margin-top: -20px;
+            left: 50%;
             -webkit-transition: all .25s ease-out;
         }
         &:hover, {
             &:after {
                 width: 100%;
+                background: $primary-color;
+                left: 0;
             } 
         }
         &.active, {
             &:after {
                 width: 100%;
+                 background: $primary-color;
+                left: 0;
             }
         }
         a {
