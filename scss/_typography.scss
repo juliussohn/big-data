@@ -2,21 +2,15 @@
 
 
 h2 {
-	text-align: center;
-	&.subheader{
+
+		&.subheader{
 		font-size: rem-calc(30);
 	}
 }
 
-.section-text {
-	font-size: 1.2em;
-	text-align: left;
-	margin: 0 15%;
-	margin-bottom: 60px;
-}
 
 section.content{
-	padding: rem-calc(60 0);
+	padding: rem-calc(80 0);
 }
 
 p {

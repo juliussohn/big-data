@@ -1,5 +1,5 @@
 .icon-chart{
-	text-align: center;
+	
 	li{
 		text-transform: uppercase;
 		font-size: 13px;
@@ -20,6 +20,11 @@
 		position: absolute;
 		left: 100px;
 		top:50px; 
+	}
+	#pi_chart{
+		position: absolute;
+		left: 50px;
+		top:0px; 
 	}
 
 }
@@ -46,6 +51,7 @@
 		}
 } 
 .icon-grid{
+	text-align: center;
 	a{
 		-webkit-transition:all .3s;
 		color:#c3c3c3;

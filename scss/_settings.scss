@@ -222,7 +222,7 @@ $header-font-family: "Bebas Neue","bebas-neue";
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(180);
- $h2-font-size: rem-calc(48);
+ $h2-font-size: rem-calc(88);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
@@ -238,10 +238,10 @@ $h1-font-size: rem-calc(180);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
- $subheader-font-color: rgba(255,255,255, 0.65);
+ $subheader-font-color: #38506B;
 // $subheader-font-weight: $font-weight-normal;
- $subheader-top-margin: rem-calc(-40);
- $subheader-bottom-margin: rem-calc(40);
+ $subheader-top-margin: rem-calc(-50);
+ $subheader-bottom-margin: rem-calc(20);
 
 // A general <small> styling
 // $small-font-size: 60%;
