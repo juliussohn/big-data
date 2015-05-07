@@ -8,6 +8,7 @@
     "Geometryangle": "TritonCode/Geometryangle",
     "scrollme": "nckprsn/scrollme#~1.1.0",
     "Chart.js": "~1.0.2",
-    "d3": "~3.5.5"
+    "d3": "~3.5.5",
+    "navicon-transformicons": "SaraSoueidan/navicon-transformicons"
   }
 }

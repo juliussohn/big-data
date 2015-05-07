@@ -1,15 +1,43 @@
 nav.top-bar {
     text-align: center;
-    padding: 0;
-    box-shadow: 0 1px 0px rgba(0,0,0,.1)
+    box-shadow: 0 1px 0px rgba(0,0,0,.1);
+    &.expanded{
+        background-color: $topbar-bg
+    }
   
 }
 
+
+.top-bar-section {
+    li {
+        position: relative;
+        a {
+            letter-spacing: 2px;
+            -webkit-transition: all .4s ease-out;
+            
+
+        }
+    }
+}
+
+.title-area{
+    height: 60px;
+    text-align: right;
+    a{
+        display: block;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media #{$medium-up} {
+nav.top-bar {
+    padding: 0;
+  
+}
 .top-bar-section {
     display: inline-block;
     li {
-        position: relative;
-    	margin: rem-calc(0 40);
+        margin: rem-calc(0 40);
         &:after {
             position: absolute;
             top: 0px;
@@ -36,11 +64,13 @@ nav.top-bar {
                 left: 0;
             }
         }
-        a {
-            letter-spacing: 2px;
-            -webkit-transition: all .4s ease-out;
-            
-
-        }
+       
     }
+}
+
+}
+
+@media #{$large-up} {
+
+
 }

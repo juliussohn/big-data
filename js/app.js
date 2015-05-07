@@ -59,14 +59,18 @@ $(".increase-button").click(function() {
     si_chart.update();
     $(".si-number span").html("+"+si+" $")
 })
-
+$(".toggle-menu a").click(function(e){
+    e.preventDefault();
+    $(".top-bar").toggleClass("expanded");
+})
 
 
 function resizeWindow() {
 
     wh = $(window).height();
     ww = $(window).width();
-    $(".header").height(wh)
+    tbh = $(".top-bar").height();
+    $(".header").height(wh-tbh);
     $(".header").width(ww)
 
 
@@ -188,8 +192,8 @@ function createCanvas() {
             mousePosition.y = e.pageY;
         }
         if (e.type == 'mouseleave') {
-            mousePosition.x = canvas.width / 2;
-            mousePosition.y = canvas.height / 2;
+            //mousePosition.x = canvas.width / 2;
+            //mousePosition.y = canvas.height / 2;
         }
     });
     $(document).foundation();

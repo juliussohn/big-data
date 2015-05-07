@@ -229,7 +229,7 @@ $h1-font-size: rem-calc(180);
 // $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
+ $h1-font-reduction: rem-calc(90);
 // $h2-font-reduction: rem-calc(10);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
@@ -1401,7 +1401,7 @@ $h1-font-size: rem-calc(180);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: $oil;
+ $topbar-bg-color: white;
  $topbar-bg: white;
 
 // Height and margin
@@ -1434,7 +1434,7 @@ $h1-font-size: rem-calc(180);
 // $topbar-button-top: 7px;
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+ $topbar-dropdown-bg: white;
 // $topbar-dropdown-link-color: $white;
 // $topbar-dropdown-link-color-hover: $topbar-link-color-hover;
 // $topbar-dropdown-link-bg: $oil;
@@ -1448,16 +1448,16 @@ $h1-font-size: rem-calc(180);
 // $topbar-dropdown-label-text-transform: uppercase;
 // $topbar-dropdown-label-font-weight: $font-weight-bold;
 // $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: $oil;
+ $topbar-dropdown-label-bg: white; 
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
 // $topbar-menu-link-color: $white;
-// $topbar-menu-icon-color: $white;
-// $topbar-menu-link-color-toggled: $jumbo;
-// $topbar-menu-icon-color-toggled: $jumbo;
+ $topbar-menu-icon-color: $dark-grey;
+ $topbar-menu-link-color-toggled: $dark-grey;
+ $topbar-menu-icon-color-toggled: $primary-color;
 // $topbar-menu-icon-position: $opposite-direction; // Change to $default-float for a left menu icon
 
 // Transitions and breakpoint styles
