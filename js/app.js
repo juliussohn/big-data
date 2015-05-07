@@ -16,7 +16,7 @@ $(document).ready(function() {
         color: color_1,
     }, {
         value: 100,
-        color: "#2E3C55",
+        color: "#2E3C55", 
     }];
 
     var data_si = [{
@@ -61,7 +61,7 @@ $(".increase-button").click(function() {
 })
 $(".toggle-menu a").click(function(e){
     e.preventDefault();
-    $(".top-bar").toggleClass("expanded");
+    $(this).closest(".top-bar").toggleClass("expanded");
 })
 
 

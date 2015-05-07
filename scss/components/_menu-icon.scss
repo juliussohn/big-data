@@ -1,8 +1,13 @@
 .nav-icon {
 display: inline-block;
-  width: 40px;
-  margin-top: 0.5em;
-  margin-right: 0.5em;
+  width: 60px;
+ margin-top: 0;
+  padding: 8px 10px;
+  border-radius: 3px;
+  background: rgba(255,255,255,1);
+}
+.top-bar.fixed{
+   //margin-top: 10px;
 }
 
 .nav-icon:after, 
