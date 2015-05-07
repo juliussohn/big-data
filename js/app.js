@@ -66,8 +66,8 @@ function resizeWindow() {
 
     wh = $(window).height();
     ww = $(window).width();
-    $("section").height(wh)
-    $("section").width(ww)
+    $(".header").height(wh)
+    $(".header").width(ww)
 
 
 }

@@ -1,20 +1,23 @@
-.begriff {
-	text-align: center;
-}
+* {-webkit-font-smoothing: antialiased}
+
 
 .begriff .section-text {
 	margin: 0 20%;
 }
 
-.section-headline {
-	font-size: 3em;
-	color: #BA2D0B;
-	padding-top: 60px;
-	margin-bottom: 30px;
+h2 {
+	text-align: center;
+	&.subheader{
+		font-size: rem-calc(30);
+	}
 }
 
 .section-text {
 	font-size: 1.2em;
 	text-align: left;
 	color: #767676;
+}
+
+section.content{
+	padding: rem-calc(60 0);
 }
