@@ -14,30 +14,30 @@
     <section class="header" style="overflow:hidden;margin-top:-80px">
       <div class="headline animateme" data-when="exit" data-from="0" data-to="1" data-opacity="0" data-translatey="300" >
         <h1 data-magellan-destination="top"  class="tk-bebas-neue ">Big Data</h1>
-            <h2>Eine Seite von Julius und Anna</h2>
+        <h2>Eine Seite von Julius und Anna</h2>
       </div>
       <div class="header-mesh" ></div>
     </section>
-      <nav class="top-bar contain-to-grid sticky" data-topbar role="navigation" data-magellan-expedition="fixed">
-        
-        <div class="top-bar-section">
-              <ul class="">
-                <li class="" data-magellan-arrival="s_1"><a href="#">Begriff</a></li>
-                <li class="" data-magellan-arrival="s_2"><a href="#">Hintergrund</a></li>
-                <li class="" data-magellan-arrival="s_2"><a href="#">Beispiele</a></li>
-                <li class="" data-magellan-arrival="s_2"><a href="#">Verarbeitung</a></li>
-                <li class="" data-magellan-arrival="s_2"><a href="#">Kritik</a></li>
-                
-              </ul>
-        </div>
-      </nav>
+    <nav class="top-bar contain-to-grid sticky" data-topbar role="navigation" data-magellan-expedition="fixed">
+      
+      <div class="top-bar-section">
+        <ul class="">
+          <li class="" data-magellan-arrival="s_1"><a href="#">Begriff</a></li>
+          <li class="" data-magellan-arrival="s_2"><a href="#">Hintergrund</a></li>
+          <li class="" data-magellan-arrival="s_2"><a href="#">Beispiele</a></li>
+          <li class="" data-magellan-arrival="s_2"><a href="#">Verarbeitung</a></li>
+          <li class="" data-magellan-arrival="s_2"><a href="#">Kritik</a></li>
+          
+        </ul>
+      </div>
+    </nav>
     <section>
       <div class="row">
         <div class="large-12 columns begriff">
           <h2 data-magellan-destination="s_1" class="section-headline">Was ist Big Data?</h2>
           <p class="section-text">Big Data bezeichnet Datenmengen, die zu groß oder zu komplex sind oder sich zu schnell ändern, um sie mit händischen und klassischen Methoden der Datenverarbeitung auszuwerten. Der Begriff "Big Data" unterliegt als Schlagwort derzeit einem kontinuierlichen Wandel. So wird mit Big Data ergänzend auch oft der Komplex der Technologien beschrieben, die zum Sammeln und Auswerten dieser Datenmengen verwendet werden.</p>
-        
-         
+          
+          
         </div>
       </div>
       
@@ -46,19 +46,70 @@
     <section>
       <h1 data-magellan-destination="s_2">Slide 2</h1>
     </section>
-    <section>
-      <h1 data-magellan-destination="s_2">Slide 2</h1>
-        <a  class="increase-button" data-productivity-increase="49">Sales</a>
-          <a  class="increase-button" data-productivity-increase="39">Consulting</a>
-          <a  class="increase-button" data-productivity-increase="21">Air transportation</a>
-          <a  class="increase-button" data-productivity-increase="20">Construction</a>
-          <a  class="increase-button" data-productivity-increase="20">Food products</a>
-          <a  class="increase-button" data-productivity-increase="20">Steel</a>
-          <a  class="increase-button" data-productivity-increase="19">Automobile</a>
-          <a  class="increase-button" data-productivity-increase="18">Industrial instruments</a>
-          <a  class="increase-button" data-productivity-increase="18">Publishing</a>
-          <a  class="increase-button" data-productivity-increase="17">Telecommunication</a>
-       <canvas id="myChart" width="400" height="400"></canvas>
+    <section class="icon-chart">
+      
+      <div class="row">
+        <div class="large-6 columns">
+          <!--<h1 data-magellan-destination="s_2" class="section-headline">Slide 2</h1>-->
+          <ul class="large-block-grid-3 icon-grid">
+            <li>
+              <a  class="increase-button first" data-sales-increase="9.6" data-productivity-increase="49">
+                <i class="ton-li-bag-1"></i>
+                Vertrieb
+              </a>
+            </li>
+            <li><a  class="increase-button" data-sales-increase="5.0" data-productivity-increase="39">
+            <i class="ton-li-speech-buble-8"></i>
+            Beratung
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="4.3" data-productivity-increase="21">
+              <i class="ton-li-plane"></i>
+              Luftverkehr
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="4.2" data-productivity-increase="20">
+              <i class="ton-li-satellite-tool"></i>
+              Bauarbeiten
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="3.4" data-productivity-increase="20">
+              <i class="ton-li-knives-forks"></i>
+              Lebensmittel
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="3.4" data-productivity-increase="20">
+              <i class="ton-li-link"></i>
+              Stahl
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="2.0" data-productivity-increase="19">
+              <i class="ton-li-car"></i>
+              Automobil
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="0.4" data-productivity-increase="18">
+              <i class="ton-li-file-1"></i>
+              Verlagswesen
+            </a></li>
+            <li><a  class="increase-button" data-sales-increase="0.4" data-productivity-increase="17">
+              <i class="ton-li-phone"></i>
+              Telekommunikation
+            </a></li>
+          </ul>
+          
+        </div>
+        <div class="large-6 columns">
+          <canvas id="pi_chart" width="400" height="400"></canvas>
+          <canvas id="si_chart" width="300" height="300"></canvas>
+          <div class="chart-numbers">
+              <div class="pi-number">
+                <span></span>
+                Produktivität
+              </div>
+              <div class="si-number">
+                <span></span>
+                 Umsatz (Mio.)
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      
     </section>
     <section>
       <h1 data-magellan-destination="s_2">Slide 2</h1>

@@ -1,61 +1,64 @@
+var color_1 = "#4D7EA8" 
+
+var myDoughnutChart;
 $(document).ready(function() {
     resizeWindow()
     createCanvas()
     $(window).resize(function() {
         resizeWindow();
     })
-   /* var graph_1 = $(".graph-1").knob({
-        min: 0,
-        max: 100,
-        val:50 
-    });*/
-	var rp1 = radialProgress($(".graph-1"))
-                .label("RADIAL 1")
-                .diameter(150)
-                .value(78)
-                .render();
+ 
+    var ctx = $("#pi_chart").get(0).getContext("2d");
+    var ctx2 = $("#si_chart").get(0).getContext("2d");
 
-    $(".increase-button").click(function() {
-    		var data = [
-			    {
-			        value: $(this).data("productivity-increase"),
-			        color:"#F7464A",
-			        highlight: "#FF5A5E",
-			        label: "Red"
-			    },
+    var data_pi = [{
+        value: 0,
+        color: color_1,
+    }, {
+        value: 100,
+        color: "#eeeeee",
+    }];
 
-			    {
-			        value: 100-$(this).data("productivity-increase"),
-			        color: "white",
-			    }
-			];
-			myDoughnutChart.Doughnut(data,{dynamicDisplay : true});
-		
-		
-	})
+    var data_si = [{
+        value: 0,
+        color: "#BA2D0B",
+    }, {
+        value: 10,
+        color: "#eeeeee",
+    }];
 
+    options = {
+        segmentShowStroke: false,
+        percentageInnerCutout: 80, // This is 0 for Pie charts
+        animationSteps: 60,
+        animationEasing: "easeOutQuart",
+        animateRotate: true,
+        animateScale: false,
+        showTooltips:false,
+        legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    }
+
+    pi_chart = new Chart(ctx).Doughnut(data_pi, options);
+    si_chart = new Chart(ctx2).Doughnut(data_si, options);
+    $(".icon-chart a.first").trigger("click");
 
 });
 
+$(".increase-button").click(function() {
+	$(".icon-grid a").removeClass("active");
+	$(this).addClass("active");
+	pi = parseInt($(this).data("productivity-increase"));
+    pi_chart.segments[0].value = pi;
+    pi_chart.segments[1].value = 100-pi;
+    pi_chart.update();
+    $(".pi-number span").html("+"+pi+" %")
 
-
-
-
-
-$('#anim').on( 'click',function(){
-  var to = dial.val();
-  for( v=0; v<=to; v++ ){
-    dial.val( v ).trigger( 'change' );
-    console.log( v );
-    setTimeout(100);
-  }
-});
-
-
-
-
-
-
+    si = ($(this).data("sales-increase"));
+    si_chart.segments[0].value = si;
+    si_chart.segments[1].value = 10-si;
+    si_chart.update();
+    $(".si-number span").html("+"+si+" $")
+})
 
 
 
@@ -77,7 +80,7 @@ function createCanvas() {
     var canvas = $('<canvas></canvas>').appendTo(header)[0],
 
         ctx = canvas.getContext('2d'),
-        color = '#4D7EA8',
+        color = color_1,
         colors = [
 
         ]

@@ -40,7 +40,11 @@
 //   "foundation/components/visibility";
 
 
-@import "components/header";
-@import "components/foundation.magellan";
-@import "components/foundation.top-bar";
 @import "typography";
+
+@import "components/header";
+@import "components/icon-chart";
+@import "components/foundation.magellan";
+@import "components/foundation.top-bar"; 
+
+@import "fonts/open-iconic-foundation";
