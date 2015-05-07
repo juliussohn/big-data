@@ -6320,7 +6320,7 @@ p {
   width: 60px;
   margin-top: 0;
   padding: 8px 10px;
-  border-radius: 3px;
+  border-radius: 5px;
   background: white; }
 
 .nav-icon:after, .nav-icon:before, .nav-icon div {
@@ -6354,8 +6354,7 @@ p {
   transform: scale(0); }
 
 nav.top-bar {
-  text-align: center;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1); }
+  text-align: center; }
   nav.top-bar.fixed {
     background: transparent; }
   nav.top-bar.expanded {
@@ -6380,9 +6379,13 @@ nav.top-bar {
 /*MEDIA QUERIES*/
 @media only screen and (min-width:40.0625em) {
   nav.top-bar {
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
     padding: 0; }
+    nav.top-bar.fixed {
+      background: white; }
 
   .top-bar-section {
+    margin-top: 0px;
     display: inline-block; }
     .top-bar-section li {
       margin: 0 2.5rem; }

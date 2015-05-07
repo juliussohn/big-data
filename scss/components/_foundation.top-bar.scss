@@ -1,6 +1,6 @@
 nav.top-bar {
     text-align: center;
-    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+    
    
     &.fixed{
         background: transparent;
@@ -35,10 +35,16 @@ nav.top-bar {
 /*MEDIA QUERIES*/
 @media #{$medium-up} {
     nav.top-bar {
+        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
         padding: 0;
+        &.fixed{
+                background: $topbar-bg;
+            }
     }
     .top-bar-section {
+    margin-top: 0px;
         display: inline-block;
+         
         li {
             margin: rem-calc(0 40);
             &:after {
