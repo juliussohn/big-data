@@ -1,10 +1,6 @@
 * {-webkit-font-smoothing: antialiased}
 
 
-.begriff .section-text {
-	margin: 0 20%;
-}
-
 h2 {
 	text-align: center;
 	&.subheader{
@@ -15,6 +11,8 @@ h2 {
 .section-text {
 	font-size: 1.2em;
 	text-align: left;
+	margin: 0 15%;
+	margin-bottom: 60px;
 }
 
 section.content{
