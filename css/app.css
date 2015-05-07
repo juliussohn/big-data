@@ -6268,12 +6268,17 @@ p {
   margin-bottom: 10px; }
 .icon-chart #si_chart {
   position: absolute;
-  left: 100px;
+  left: 50px;
   top: 50px; }
 .icon-chart #pi_chart {
   position: absolute;
-  left: 50px;
+  left: 0px;
   top: 0px; }
+.icon-chart .increase_charts {
+  margin: 0 auto;
+  position: relative;
+  height: 400px;
+  width: 400px; }
 
 .chart-numbers {
   text-transform: uppercase;
@@ -6281,7 +6286,6 @@ p {
   position: absolute;
   width: 400px;
   text-align: center;
-  left: 50px;
   top: 100px; }
   .chart-numbers .si-number {
     color: #BA2D0B; }
@@ -6393,6 +6397,9 @@ nav.top-bar {
         width: 100%;
         background: #4D7EA8;
         left: 0; }
+
+  .title-area .toggle-menu {
+    display: none; }
  }
 
 @font-face {

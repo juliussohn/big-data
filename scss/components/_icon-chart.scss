@@ -18,15 +18,20 @@
 	}
 	#si_chart{
 		position: absolute;
-		left: 100px;
+		left: 50px;
 		top:50px; 
 	}
 	#pi_chart{
 		position: absolute;
-		left: 50px;
+		left: 00px;
 		top:0px; 
 	}
-
+	.increase_charts{
+		margin: 0 auto;
+		position: relative;
+		height: 400px;
+		width: 400px;
+	}
 }
 .chart-numbers{
 	text-transform: uppercase;
@@ -34,7 +39,6 @@
 	position: absolute;
 	width: 400px;
 	text-align: center;
-	left: 50px;
 	top: 100px;
 	.si-number{
 		color: #BA2D0B;

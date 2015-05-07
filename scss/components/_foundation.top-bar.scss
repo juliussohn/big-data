@@ -1,12 +1,10 @@
 nav.top-bar {
     text-align: center;
-    box-shadow: 0 1px 0px rgba(0,0,0,.1);
-    &.expanded{
-        background-color: $topbar-bg
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+    &.expanded {
+        background-color: $topbar-bg;
     }
-  
 }
-
 
 .top-bar-section {
     li {
@@ -14,63 +12,60 @@ nav.top-bar {
         a {
             letter-spacing: 2px;
             -webkit-transition: all .4s ease-out;
-            
-
         }
     }
 }
 
-.title-area{
+.title-area {
     height: 60px;
     text-align: right;
-    a{
+    a {
         display: block;
     }
 }
 
 /*MEDIA QUERIES*/
 @media #{$medium-up} {
-nav.top-bar {
-    padding: 0;
-  
-}
-.top-bar-section {
-    display: inline-block;
-    li {
-        margin: rem-calc(0 40);
-        &:after {
-            position: absolute;
-            top: 0px;
-            display: block;
-            height: 5px;
-            background-color: $primary-color;
-            content: "";
-            width: 0%;
-            margin: 0 auto;
-            left: 50%;
-            -webkit-transition: all .25s ease-out;
-        }
-        &:hover, {
+    nav.top-bar {
+        padding: 0;
+    }
+    .top-bar-section {
+        display: inline-block;
+        li {
+            margin: rem-calc(0 40);
             &:after {
-                width: 100%;
-                background: $primary-color;
-                left: 0;
-            } 
-        }
-        &.active, {
-            &:after {
-                width: 100%;
-                 background: $primary-color;
-                left: 0;
+                position: absolute;
+                top: 0px;
+                display: block;
+                height: 5px;
+                background-color: $primary-color;
+                content: "";
+                width: 0%;
+                margin: 0 auto;
+                left: 50%;
+                -webkit-transition: all .25s ease-out;
+            }
+            &:hover {
+                &:after {
+                    width: 100%;
+                    background: $primary-color;
+                    left: 0;
+                }
+            }
+            &.active {
+                &:after {
+                    width: 100%;
+                    background: $primary-color;
+                    left: 0;
+                }
             }
         }
-       
+    }
+    .title-area {
+        .toggle-menu {
+            display: none;
+        }
     }
 }
 
-}
-
-@media #{$large-up} {
-
-
-}
+@media #{$large-up} {}
