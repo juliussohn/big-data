@@ -1,0 +1,74 @@
+.icon-chart{
+	text-align: center;
+	li{
+		text-transform: uppercase;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+	i{
+		font-size: 40px;
+		display:block;
+		height: 80px;
+		width: 80px;
+		line-height: 80px;
+		border: 1px solid $primary-color;
+		border-radius: 100%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	#si_chart{
+		position: absolute;
+		left: 100px;
+		top:50px;
+	}
+
+}
+.chart-numbers{
+	text-transform: uppercase;
+	font-weight: bold;
+	position: absolute;
+	width: 400px;
+	text-align: center;
+	left: 50px;
+	top: 100px;
+	.si-number{
+		color: #BA2D0B;
+	}
+	.pi-number{
+		color:$primary-color;
+	}
+		span{
+			font-family: "bebas-neue";
+			display: block;
+			font-size: 60px;
+			margin-bottom: -20px;
+		}
+} 
+.icon-grid{
+	a{
+		-webkit-transition:all .3s;
+		color:#c3c3c3;
+		i{
+			border-color:#c3c3c3;
+			-webkit-transition:all .5s;
+		}
+		&.active{
+			color: $primary-color;
+			i{
+				background: $primary-color;
+				color: white;
+				border-color:$primary-color;
+			}
+		}
+		&:hover:not(.active){
+
+			color:#777777;
+			i{
+				-webkit-transform:scale(1.1);
+				border-color:#777777;
+			}
+		}
+		
+	}
+	
+}
