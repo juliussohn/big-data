@@ -42,7 +42,7 @@ function dataCounter(){
         gb_new_data_amount = eb_new_data_amount* gb_convert_factor;
 
 
-       $(".data_counter").text(Math.ceil(gb_new_data_amount)+" GB");
+       $(".data_counter").text(Math.ceil(gb_new_data_amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")+" GB");
 
         
 
