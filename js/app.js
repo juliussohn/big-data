@@ -133,8 +133,8 @@ function createCanvas() {
 
 
     var mousePosition = {
-        x: 30 * canvas.width / 500,
-        y: 30 * canvas.height / 100
+        x: canvas.width / 2,
+        y: 10 * canvas.height / 100
     };
 
     function Dot() {
@@ -209,8 +209,8 @@ function createCanvas() {
 
     idle = setInterval(createDots, 1000 / 30);
 
-    $(canvas).on('mousemove mouseleave', function(e) {
-        if (e.type == 'mousemove') {
+    $(canvas).on('mousemove mouseleave click', function(e) {
+        if (e.type == 'mousemove' || e.type == 'click') {
             mousePosition.x = e.pageX;
             mousePosition.y = e.pageY;
         }
@@ -219,5 +219,7 @@ function createCanvas() {
             //mousePosition.y = canvas.height / 2;
         }
     });
+    
+
     $(document).foundation();
 };

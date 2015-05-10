@@ -58,7 +58,7 @@ body {
   background: #262B3F;
   color: white;
   cursor: auto;
-  font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -1124,7 +1124,7 @@ select {
       background: #EFEFEF;
       color: #222222;
       display: block;
-      font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
       padding: 1rem; }
       .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
@@ -1557,7 +1557,7 @@ button, .button {
   border-style: solid;
   border-width: 0;
   cursor: pointer;
-  font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3315,7 +3315,7 @@ label.error {
 
 .label {
   display: inline-block;
-  font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 400;
   line-height: 1;
   margin-bottom: auto;
@@ -3696,7 +3696,7 @@ ul.pagination {
   .pricing-table .title {
     background-color: #333333;
     color: #EEEEEE;
-    font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     padding: 0.9375rem 1.25rem;
@@ -3704,7 +3704,7 @@ ul.pagination {
   .pricing-table .price {
     background-color: #F6F6F6;
     color: #333333;
-    font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 2rem;
     font-weight: 400;
     padding: 0.9375rem 1.25rem;
@@ -3958,7 +3958,7 @@ ul.pagination {
 
 .side-nav {
   display: block;
-  font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   list-style-position: outside;
   list-style-type: none;
   margin: 0;
@@ -3979,7 +3979,7 @@ ul.pagination {
         color: #80a5c5; }
     .side-nav li.active > a:first-child:not(.button) {
       color: #80a5c5;
-      font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-weight: 400; }
     .side-nav li.divider {
       border-top: 1px solid;
@@ -4097,7 +4097,7 @@ ul.pagination {
   .sub-nav dt, .sub-nav dd, .sub-nav li {
     color: #999999;
     float: left;
-    font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     margin-left: 1rem;
@@ -4272,7 +4272,7 @@ table {
       display: block;
       background-color: #EFEFEF;
       color: #222222;
-      font-family: "source-sans-pro", "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+      font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
       padding: 1rem 2rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
@@ -5128,7 +5128,7 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   color: #D1340D;
-  font-family: "Bebas Neue", "bebas-neue";
+  font-family: "Bebas Neue", "bebas-neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.4;
@@ -5141,7 +5141,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 5.625rem; }
+  font-size: 8.4375rem; }
 
 h2 {
   font-size: 4.875rem; }
@@ -6224,7 +6224,7 @@ p {
     margin-bottom: 15px; }
   .header h1.subheader {
     letter-spacing: 3.3px;
-    font-size: 13.1px;
+    font-size: 25px;
     margin-bottom: 0; }
   .header .headline {
     position: absolute;
