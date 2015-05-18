@@ -30,8 +30,9 @@
         
         <ul class="">
           <li class="" data-magellan-arrival="begriff"><a href="#begriff">Begriff</a></li>
-          <li class="" data-magellan-arrival="hintergrund"><a href="#hintergrund">Hintergrund</a></li>
           <li class="" data-magellan-arrival="beispiele"><a href="#beispiele">Beispiele</a></li>
+
+          <li class="" data-magellan-arrival="hintergrund"><a href="#hintergrund">Hintergrund</a></li>
           <li class="" data-magellan-arrival="verarbeitung"><a href="#verarbeitung">Verarbeitung</a></li>
           <li class="" data-magellan-arrival="kritik"><a href="#kritik">Kritik</a></li>
           
@@ -41,30 +42,23 @@
     <section class="content" data-magellan-destination="begriff">
       <a name="begriff" id="begriff"></a>
       <div class="row">
-        <div  class="large-12 columns begriff">
+        <div  class="large-7 columns  ">
           <h2 >Der Begriff</h2>
           <h2  class="subheader">Was ist Big Data?</h2>
           <p >Big Data bezeichnet Datenmengen, die zu groß oder zu komplex sind oder sich zu schnell ändern, um sie mit händischen und klassischen Methoden der Datenverarbeitung auszuwerten. Der Begriff "Big Data" unterliegt als Schlagwort derzeit einem kontinuierlichen Wandel. So wird mit Big Data ergänzend auch oft der Komplex der Technologien beschrieben, die zum Sammeln und Auswerten dieser Datenmengen verwendet werden.</p>
         </div>
-      </div>
-    </section>
-    <section class="content" data-magellan-destination="hintergrund">
-      <a name="hintergrund" id="hintergrund"></a>
-      <div class="row">
-        <div  class="large-12 columns hintergrund">
-          <h2 >Hintergrund</h2>
-          <h2 class="subheader">Woher kommen diese Datenmengen?</h2>
-          <p >Berechnungen aus dem Jahr 2011 zufolge verdoppelt sich das weltweite Datenvolumen alle 2 Jahre. Diese Entwicklung wird vor allem getrieben durch die zunehmende maschinelle Erzeugung von Daten z. B. über Protokolle von Telekommunikationsverbindungen (Call Detail Record, CDR) und Webzugriffen (Logdateien), automatische Erfassungen von RFID-Lesern, Kameras, Mikrofonen und sonstigen Sensoren. Big Data fallen auch in der Finanzindustrie an (Finanztransaktionen, Börsendaten) sowie im Energiesektor (Verbrauchsdaten) und im Gesundheitswesen (Verschreibungen). In der Wissenschaft fallen ebenfalls große Datenmengen an, z. B. in der Geologie, Genetik, Klimaforschung und Kernphysik. Der IT-Branchenverband Bitkom hat Big Data als einen Trend im Jahr 2012 bezeichnet.</p>
+        <div  class="large-5 columns">
+          <img src="img/begriff.png">
         </div>
       </div>
     </section>
-    <section class="icon-chart" class="content" data-magellan-destination="beispiele">
+    <section class="icon-chart content light"  data-magellan-destination="beispiele">
       <a name="beispiele" id="beispiele"></a>
       <div class="row">
-        <div  class="large-12 columns verarbeitung">
+        <div  class="large-12 columns  text-center">
           <h2 >Beispiele</h2>
           <h2  class="subheader">Wie nutzen Unternehmen Big Data?</h2>
-          <p >In der Forschung können durch Verknüpfung großer Datenmengen und statistische Auswertungen neue Erkenntnisse gewonnen werden, insbesondere in Disziplinen, in denen bisher viele Daten noch von Hand ausgewertet wurden. Unternehmen erhoffen sich von der Analyse von Big Data Möglichkeiten zur Erlangung von Wettbewerbsvorteilen, zur Generierung von Einsparungspotentialen und zur Schaffung von neuen Geschäftsfeldern. In der unten liegenden infografik wird verdeutlicht wie die Datenanalyse von Big Data die Produktivität und den Umsatz in verschiedenen Sektoren gesteigert hat.</p>
+          
         </div>
       </div>
       <div class="row">
@@ -108,10 +102,21 @@
       
       
     </section>
-    <section class="content" data-magellan-destination="verarbeitung">
+    <section class="content" data-magellan-destination="hintergrund">
+      <a name="hintergrund" id="hintergrund"></a>
+      <div class="row">
+        <div  class="large-12 columns">
+          <h2 >Hintergrund</h2>
+          <h2 class="subheader">Woher kommen diese Datenmengen?</h2>
+          <p >Berechnungen aus dem Jahr 2011 zufolge verdoppelt sich das weltweite Datenvolumen alle 2 Jahre. Diese Entwicklung wird vor allem getrieben durch die zunehmende maschinelle Erzeugung von Daten z. B. über Protokolle von Telekommunikationsverbindungen (Call Detail Record, CDR) und Webzugriffen (Logdateien), automatische Erfassungen von RFID-Lesern, Kameras, Mikrofonen und sonstigen Sensoren. Big Data fallen auch in der Finanzindustrie an (Finanztransaktionen, Börsendaten) sowie im Energiesektor (Verbrauchsdaten) und im Gesundheitswesen (Verschreibungen). In der Wissenschaft fallen ebenfalls große Datenmengen an, z. B. in der Geologie, Genetik, Klimaforschung und Kernphysik. Der IT-Branchenverband Bitkom hat Big Data als einen Trend im Jahr 2012 bezeichnet.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content light" data-magellan-destination="verarbeitung">
       <a name="verarbeitung" id="verarbeitung"></a>
       <div class="row">
-        <div  class="large-12 columns verarbeitung">
+        <div  class="large-12 columns">
           <h2 >Verarbeitung</h2>
         </div>
       </div>
@@ -121,17 +126,24 @@
       <div class="row">
         <div  class="large-12 columns kritik">
           <h2 >Kritik</h2>
+          <canvas id="growth-chart" style="height:500px; width:100%;"></canvas>
+          <a class="growth-button" data-dataset="0">Sensore & Geräte</a>
+          <a class="growth-button" data-dataset="1">Soziale Medien</a>
+          <a class="growth-button" data-dataset="2">VoIP</a>
+          <a class="growth-button" data-dataset="3">Unternehmensdaten</a>
         </div>
       </div>
     </section>
-    <section>
+    <footer>
+    <section class="content light">
       <div class="row">
         <div  class="large-12 columns text-center">
         <h2 class="data_counter"></h2>
-        <h2 class="subheader">GB Daten auf der Welt</h2>
+        <h2 class="subheader">GB Daten existieren auf der Welt</h2>
         </div>
       </div>
     </section>
+    </footer>
     <script src="js/libs.js"></script>
     <script src="js/app.js"></script>
   </body>
