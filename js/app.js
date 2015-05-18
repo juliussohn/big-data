@@ -102,32 +102,38 @@ function createGrowthChart() {
             scaleSteps: 10,
             scaleStepWidth: 10000/10,
             scaleStartValue: 0,
-            scaleShowGridLines : false,
+            scaleShowVerticalGridLines : false,
             scaleLineColor: "transparent",
-            pointDot : false,
-            datasetStroke : false,
+            pointDot : true,
+            datasetStroke : true,
+            datasetFill : false,
+            pointDotRadius :10,
+            pointDotStrokeWidth : 5,
+            datasetStrokeWidth : 5,
 
         };
     var growth_data = [{
         label: "Sensoren & Geräte",
         fillColor: "green",
-
-        data: [2000, 2300, 3200, 4700, 6800, 9500]
+        strokeColor: "green",
+        pointColor: "#292f45",
+        pointStrokeColor: "green",
+        data: [2000, 2950, 3000, 5500, 6900, 9500]
     }, {
         label: "Soziale Medien",
         fillColor: "green",
         strokeColor: "red(220,220,220,1)",
-        data: [2000, 2185, 2740, 3665, 4960, 6625]
+        data: [2000, 2585, 2940, 3065, 4960, 6625]
     }, {
         label: "VoiP",
         fillColor: "blue",
         strokeColor: "rgba(220,220,220,1)",
-        data: [2000, 2085, 2340, 2765, 3360, 4125]
+        data: [2000, 2000, 2340, 2465, 3860, 4125]
     }, {
         label: "Unternehmensdaten",
         fillColor: "yellow",
         strokeColor: "rgba(220,220,220,1)",
-        data: [2000, 2055, 2220, 2495, 2880, 3370]
+        data: [2000, 2055, 2420, 2495, 2880, 3370]
     }]
      data = {
             labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
