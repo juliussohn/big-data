@@ -64,6 +64,7 @@ function createIconChart() {
     }];
     options = {
         responsive:true,
+        maintainAspectRatio: true,
         segmentShowStroke: false,
         percentageInnerCutout: 78, // This is 0 for Pie charts
         animationSteps: 60,
@@ -96,6 +97,7 @@ function createGrowthChart() {
     var ctx = $("#growth-chart").get(0).getContext("2d"),
         options = {
             responsive:true,
+            maintainAspectRatio: false,
             scaleFontFamily: "Proxima Nova, Helvetica, sans-serif",
             scaleFontSize: 14,
             // String - Scale label font weight style
@@ -106,6 +108,7 @@ function createGrowthChart() {
             showTooltips: false,
             scaleOverride: true,
             scaleSteps: 10,
+
             scaleStepWidth: 10000/10,
             scaleStartValue: 0,
             scaleShowVerticalGridLines : false,
