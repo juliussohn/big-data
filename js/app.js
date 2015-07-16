@@ -97,7 +97,7 @@ function createGrowthChart() {
     var ctx = $("#growth-chart").get(0).getContext("2d"),
         options = {
             responsive:true,
-            maintainAspectRatio: false,
+            maintainAspectRatio: true,
             scaleFontFamily: "Proxima Nova, Helvetica, sans-serif",
             scaleFontSize: 14,
             // String - Scale label font weight style
