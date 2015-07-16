@@ -1,7 +1,9 @@
 footer{
 	h2{
 		font-size:rem-calc(36);
+		margin-bottom: rem-calc(40);
 		&.subheader{
+
 			font-size: rem-calc(22);
 		}
 	}
@@ -11,6 +13,11 @@ footer{
 	footer{
 	h2{
 		font-size:rem-calc(80);
+		margin-bottom: rem-calc(20);
+		&.subheader{
+
+			font-size: rem-calc(46);
+		}
 	}
 } 
 }
@@ -19,6 +26,11 @@ footer{
   footer{
 	h2{
 		font-size:rem-calc(120);
+		margin-bottom: 0;
+		&.subheader{
+
+			font-size: rem-calc(70);
+		}
 	}
 } 
 }
