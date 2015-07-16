@@ -37,6 +37,8 @@ module.exports = function(grunt) {
                 },
                 mainFiles: {
                     'foundation': 'js/foundation.js',
+                    'navicon-transformicons': 'css/style.css',
+                    'radios-to-slider': ['css/radios-to-slider.css','js/jquery.radios-to-slider.min.js'],
                 }
             }
         }

@@ -212,7 +212,7 @@ $body-font-color: white;
 
 // We use these to control header font styles
 $header-font-family: "Bebas Neue","bebas-neue", Helvetica, sans-serif;
-// $header-font-weight: $font-weight-normal; 
+ $header-font-weight:600; 
 // $header-font-style: normal;
  $header-font-color: $secondary-color;
 // $header-line-height: 1.4;
@@ -230,7 +230,7 @@ $h1-font-size: rem-calc(180);
 
 // We use these to control header size reduction on small screens
  $h1-font-reduction: rem-calc(45);
-// $h2-font-reduction: rem-calc(10);
+ $h2-font-reduction: rem-calc(30);
 // $h3-font-reduction: rem-calc(5);
 // $h4-font-reduction: rem-calc(5);
 // $h5-font-reduction: 0;
@@ -238,8 +238,8 @@ $h1-font-size: rem-calc(180);
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
- $subheader-font-color: #38506B;
-// $subheader-font-weight: $font-weight-normal;
+ $subheader-font-color: #3B5978;
+ $subheader-font-weight: 600;
  $subheader-top-margin: rem-calc(-50);
  $subheader-bottom-margin: rem-calc(20);
 
@@ -1091,14 +1091,14 @@ $h1-font-size: rem-calc(180);
 
 // These variables define the slider bar styles
 // $range-slider-bar-width: 100%;
-// $range-slider-bar-height: rem-calc(16);
+ $range-slider-bar-height: rem-calc(1);
 
-// $range-slider-bar-border-width: 1px;
+ $range-slider-bar-border-width: 0px;
 // $range-slider-bar-border-style: solid;
 // $range-slider-bar-border-color: $gainsboro;
 // $range-slider-radius: $global-radius;
 // $range-slider-round: $global-rounded;
-// $range-slider-bar-bg-color: $ghost;
+ $range-slider-bar-bg-color: white;
 // $range-slider-active-segment-bg-color: scale-color($secondary-color, $lightness: -1%);
 
 // Vertical bar styles

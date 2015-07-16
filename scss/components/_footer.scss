@@ -1,5 +1,24 @@
 footer{
 	h2{
+		font-size:rem-calc(40);
+		&.subheader{
+			font-size: rem-calc(25);
+		}
+	}
+} 
+
+@media #{$medium-up} {
+	footer{
+	h2{
+		font-size:rem-calc(80);
+	}
+} 
+}
+
+@media #{$large-up} {
+  footer{
+	h2{
 		font-size:rem-calc(120);
 	}
 } 
+}

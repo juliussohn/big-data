@@ -1,4 +1,6 @@
 var color_1 = "#4D7EA8"
+var color_2 = "#D1340D"
+
 $(document).ready(function() {
     resizeWindow()
     createCanvas()
@@ -12,6 +14,8 @@ $(document).ready(function() {
         e.preventDefault();
         $(this).closest(".top-bar").toggleClass("expanded");
     })
+
+   
 });
 /**
  *  resize header to fullscreeen
@@ -59,6 +63,7 @@ function createIconChart() {
         color: "#452B34",
     }];
     options = {
+        responsive:true,
         segmentShowStroke: false,
         percentageInnerCutout: 78, // This is 0 for Pie charts
         animationSteps: 60,
@@ -71,7 +76,7 @@ function createIconChart() {
     pi_chart = new Chart(ctx).Doughnut(data_pi, options);
     si_chart = new Chart(ctx2).Doughnut(data_si, options);
     $(".increase-button").click(function() {
-        $(".icon-grid a").removeClass("active");
+        $(".icon-chart a").removeClass("active");
         $(this).addClass("active");
         pi = parseInt($(this).data("productivity-increase"));
         pi_chart.segments[0].value = pi;
@@ -90,6 +95,7 @@ function createIconChart() {
 function createGrowthChart() {
     var ctx = $("#growth-chart").get(0).getContext("2d"),
         options = {
+            responsive:true,
             scaleFontFamily: "Proxima Nova, Helvetica, sans-serif",
             scaleFontSize: 14,
             // String - Scale label font weight style
@@ -103,7 +109,7 @@ function createGrowthChart() {
             scaleStepWidth: 10000/10,
             scaleStartValue: 0,
             scaleShowVerticalGridLines : false,
-            scaleLineColor: "transparent",
+            scaleLineColor: "#2E3C55",
             pointDot : true,
             datasetStroke : true,
             datasetFill : false,
@@ -114,10 +120,10 @@ function createGrowthChart() {
         };
     var growth_data = [{
         label: "Sensoren & Geräte",
-        fillColor: "green",
-        strokeColor: "green",
+        fillColor: color_2,
+        strokeColor: color_2,
         pointColor: "#292f45",
-        pointStrokeColor: "green",
+        pointStrokeColor: color_2,
         data: [2000, 2950, 3000, 5500, 6900, 9500]
     }, {
         label: "Soziale Medien",
@@ -140,6 +146,17 @@ function createGrowthChart() {
             datasets: [growth_data[0] ]  
     };
     var growth_chart = new Chart(ctx).Line(data, options);
+
+     $('#growth-slider').on('change.fndtn.slider', function(){
+        var dataset = $('#growth-slider').attr('data-slider');
+        for(var i = 0; i<growth_chart.datasets[0].points.length; i++){
+
+            growth_chart.datasets[0].points[i].value = growth_data[dataset].data[i];
+            growth_chart.datasets[0].fillColor = growth_data[dataset].fillColor;
+        }
+       ///growth_chart.datasets[0].points[0] = 0;
+        growth_chart.update();
+    });
 
     $(".growth-button").click(function(){   
         $(".growth-button").removeClass("active");
@@ -255,4 +272,5 @@ function createCanvas() {
         }
     });
     $(document).foundation();
+
 };

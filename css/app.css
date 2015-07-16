@@ -3845,17 +3845,17 @@ button:focus {
       border-radius: 999px; }
 
 .range-slider {
-  border: 1px solid #DDDDDD;
+  border: 0px solid #DDDDDD;
   margin: 1.25rem 0;
   position: relative;
   -ms-touch-action: none;
   touch-action: none;
   display: block;
-  height: 1rem;
+  height: 0.0625rem;
   width: 100%;
-  background: #FAFAFA; }
+  background: white; }
   .range-slider.vertical-range {
-    border: 1px solid #DDDDDD;
+    border: 0px solid #DDDDDD;
     margin: 1.25rem 0;
     position: relative;
     -ms-touch-action: none;
@@ -3874,9 +3874,9 @@ button:focus {
       border-top-left-radius: initial;
       bottom: 0;
       height: auto;
-      width: 0.875rem; }
+      width: 0.0625rem; }
   .range-slider.radius {
-    background: #FAFAFA;
+    background: white;
     border-radius: 3px; }
     .range-slider.radius .range-slider-handle {
       background: #4D7EA8;
@@ -3884,7 +3884,7 @@ button:focus {
       .range-slider.radius .range-slider-handle:hover {
         background: #446f94; }
   .range-slider.round {
-    background: #FAFAFA;
+    background: white;
     border-radius: 1000px; }
     .range-slider.round .range-slider-handle {
       background: #4D7EA8;
@@ -3892,7 +3892,7 @@ button:focus {
       .range-slider.round .range-slider-handle:hover {
         background: #446f94; }
   .range-slider.disabled, .range-slider[disabled] {
-    background: #FAFAFA;
+    background: white;
     cursor: not-allowed;
     opacity: 0.7; }
     .range-slider.disabled .range-slider-handle, .range-slider[disabled] .range-slider-handle {
@@ -3907,7 +3907,7 @@ button:focus {
   border-bottom-left-radius: inherit;
   border-top-left-radius: inherit;
   display: inline-block;
-  height: 0.875rem;
+  height: 0.0625rem;
   position: absolute; }
 
 .range-slider-handle {
@@ -5256,7 +5256,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #D1340D;
   font-family: "Bebas Neue", "bebas-neue", Helvetica, sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.4;
   margin-bottom: 1.875rem;
   margin-top: 0.2rem;
@@ -5270,7 +5270,7 @@ h1 {
   font-size: 8.4375rem; }
 
 h2 {
-  font-size: 4.875rem; }
+  font-size: 3.625rem; }
 
 h3 {
   font-size: 1.375rem; }
@@ -5286,8 +5286,8 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #38506B;
-  font-weight: 400;
+  color: #3B5978;
+  font-weight: 600;
   margin-top: -3.125rem;
   margin-bottom: 1.25rem; }
 
@@ -6325,7 +6325,17 @@ th.hide-for-touch {
     margin-top: -130px; } }
 
 footer h2 {
-  font-size: 7.5rem; }
+  font-size: 2.5rem; }
+  footer h2.subheader {
+    font-size: 1.5625rem; }
+
+@media only screen and (min-width: 40.0625em) {
+  footer h2 {
+    font-size: 5rem; } }
+
+@media only screen and (min-width: 64.0625em) {
+  footer h2 {
+    font-size: 7.5rem; } }
 
 section.content {
   padding: 6.25rem 0; }
@@ -6340,40 +6350,35 @@ section.content {
   font-size: 13px;
   margin-bottom: 15px; }
 
-.icon-chart i {
-  font-size: 40px;
-  display: block;
-  height: 80px;
-  width: 80px;
-  line-height: 80px;
-  border: 1px solid #4D7EA8;
-  border-radius: 100%;
-  margin: 0 auto;
-  margin-bottom: 10px; }
-
 .icon-chart #si_chart {
   position: absolute;
-  left: 50px;
-  top: 50px; }
+  left: 36px;
+  top: 36px;
+  width: 75% !important;
+  height: 75% !important; }
 
 .icon-chart #pi_chart {
   position: absolute;
   left: 00px;
-  top: 0px; }
+  top: 0px;
+  width: 100% !important;
+  height: 100% !important; }
 
 .icon-chart .increase_charts {
   margin: 0 auto;
   position: relative;
-  height: 400px;
-  width: 400px; }
+  height: 18.125rem;
+  width: 18.125rem;
+  margin-bottom: 2.5rem; }
 
 .chart-numbers {
   text-transform: uppercase;
   font-weight: bold;
   position: absolute;
-  width: 400px;
+  width: 290px;
   text-align: center;
-  top: 100px; }
+  top: 70px;
+  font-size: 0.875rem; }
   .chart-numbers .si-number {
     color: #BA2D0B; }
   .chart-numbers .pi-number {
@@ -6382,17 +6387,26 @@ section.content {
   .chart-numbers span {
     font-family: "Bebas Neue", "bebas-neue";
     display: block;
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: -20px; }
 
 .icon-grid {
   text-align: center; }
+  .icon-grid i {
+    font-size: 40px;
+    display: block;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border: 1px solid #4D7EA8;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-color: #c3c3c3;
+    -webkit-transition: all 0.5s; }
   .icon-grid a {
     -webkit-transition: all 0.3s;
     color: #c3c3c3; }
-    .icon-grid a i {
-      border-color: #c3c3c3;
-      -webkit-transition: all 0.5s; }
     .icon-grid a.active {
       color: #4D7EA8; }
       .icon-grid a.active i {
@@ -6401,6 +6415,44 @@ section.content {
         border-color: #4D7EA8; }
     .icon-grid a:hover:not(.active) i {
       -webkit-transform: scale(1.1); }
+
+@media only screen and (min-width: 40.0625em) {
+  .icon-grid li {
+    margin-bottom: 0; }
+  .icon-chart .increase_charts {
+    margin-top: 2.5rem;
+    margin-bottom: 0; } }
+
+@media only screen and (min-width: 64.0625em) {
+  .icon-chart #si_chart {
+    left: 50px;
+    top: 50px;
+    width: 75% !important;
+    height: 75% !important; }
+  .icon-chart #pi_chart {
+    left: 00px;
+    top: 0px;
+    width: 100% !important;
+    height: 100% !important; }
+  .icon-chart .increase_charts {
+    height: 400px;
+    width: 400px;
+    margin-top: 0; }
+  .icon-grid {
+    margin-top: 1.25rem; }
+  .chart-numbers {
+    width: 400px;
+    top: 100px;
+    font-size: 1rem; }
+    .chart-numbers .pi-number {
+      margin-bottom: -10px; }
+    .chart-numbers span {
+      font-size: 60px;
+      margin-bottom: -20px; } }
+
+#growth-chart {
+  width: 100% !important;
+  margin-bottom: 40px; }
 
 .nav-icon {
   display: inline-block;

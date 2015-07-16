@@ -62,8 +62,25 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-6 columns">
-          <ul class="large-block-grid-3 icon-grid">
+      <div class="large-6  medium-6 large-push-6 medium-push-6 columns">
+        <div class="increase_charts">
+          <canvas id="pi_chart" width="400" height="400"></canvas>
+          <canvas id="si_chart" width="300" height="300"></canvas>
+          <div class="chart-numbers">
+            <div class="pi-number">
+              <span></span>
+              Produktivität
+            </div>
+            <div class="si-number">
+              <span></span>
+              Umsatz (Mio.)
+            </div>
+          </div>
+          </div>
+          
+        </div>
+        <div class="large-6 medium-6 large-pull-6 medium-pull-6 columns">
+          <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-3 icon-grid">
             <li>
               <a  class="increase-button first" data-sales-increase="9.6" data-productivity-increase="49">
                 <i class="ton-li-bag-1"></i>
@@ -81,23 +98,7 @@
           </ul>
           
         </div>
-        <div class="large-6 columns">
-        <div class="increase_charts">
-          <canvas id="pi_chart" width="400" height="400"></canvas>
-          <canvas id="si_chart" width="300" height="300"></canvas>
-          <div class="chart-numbers">
-            <div class="pi-number">
-              <span></span>
-              Produktivität
-            </div>
-            <div class="si-number">
-              <span></span>
-              Umsatz (Mio.)
-            </div>
-          </div>
-          </div>
-          
-        </div>
+        
       </div>
       
       
@@ -125,13 +126,25 @@
       <a name="kritik" id="kritik"></a>
       <div class="row">
         <div  class="large-12 columns kritik">
-          <h2 >Kritik</h2>
+          <h2 >Wachstum</h2>
           <canvas id="growth-chart" style="height:500px; width:100%;"></canvas>
-          <a class="growth-button" data-dataset="0">Sensore & Geräte</a>
-          <a class="growth-button" data-dataset="1">Soziale Medien</a>
-          <a class="growth-button" data-dataset="2">VoIP</a>
-          <a class="growth-button" data-dataset="3">Unternehmensdaten</a>
+   
+ 
+  <ul class="large-block-grid-4 medium-block-grid-4 small-block-grid-2 icon-grid">
+ 
+            
+            <li><a  class="growth-button active" data-dataset="0"><i class="ton-li-signal"></i>Sensore & Geräte</a></li>
+            <li><a  class="growth-button" data-dataset="2"><i class="ton-li-microphone-1"></i>VoIP</a></li>
+            <li><a  class="growth-button" data-dataset="1"><i class="ton-li-share"></i>Soziale Medien</a></li>
+            <li><a  class="growth-button" data-dataset="3"><i class="ton-li-chart-3"></i>Unternehmensdaten</a>
+            
+          </ul>
+
+
         </div>
+
+ 
+       
       </div>
     </section>
     <footer>

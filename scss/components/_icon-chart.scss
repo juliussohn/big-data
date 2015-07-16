@@ -1,89 +1,142 @@
-.icon-chart{
-	
-	.subheader{
-		margin-bottom: rem-calc(60);
-	}
-	
-	li{
-		text-transform: uppercase;
-		font-size: 13px;
-		margin-bottom: 15px;
-	}
-	i{
-		font-size: 40px;
-		display:block;
-		height: 80px;
-		width: 80px;
-		line-height: 80px;
-		border: 1px solid $primary-color;
-		border-radius: 100%;
-		margin: 0 auto;
-		margin-bottom: 10px;
-	}
-	#si_chart{
-		position: absolute;
-		left: 50px;
-		top:50px; 
-	}
-	#pi_chart{
-		position: absolute;
-		left: 00px;
-		top:0px; 
-	}
-	.increase_charts{
-		margin: 0 auto;
-		position: relative;
-		height: 400px;
-		width: 400px;
-	}
+.icon-chart {
+    .subheader {
+        margin-bottom: rem-calc(60);
+    }
+    li {
+        text-transform: uppercase;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+    #si_chart {
+        position: absolute;
+        left: 36px;
+        top: 36px;
+        width: 75% !important;
+        height: 75% !important;
+    }
+    #pi_chart {
+        position: absolute;
+        left: 00px;
+        top: 0px;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .increase_charts {
+        margin: 0 auto;
+        position: relative;
+        height: rem-calc(290);
+        width: rem-calc(290);
+         margin-bottom: rem-calc(40);
+    }
 }
-.chart-numbers{
-	text-transform: uppercase;
-	font-weight: bold;
-	position: absolute;
-	width: 400px;
-	text-align: center;
-	top: 100px;
-	.si-number{
-		color: #BA2D0B;
-	}
-	.pi-number{
-		color:$primary-color;
-		margin-bottom: -10px;
-	}
-		span{
-			font-family: "Bebas Neue", "bebas-neue";
-			display: block;
-			font-size: 60px;
-			margin-bottom: -20px;
-		}
-} 
-.icon-grid{
-	text-align: center;
-	a{
-		-webkit-transition:all .3s;
-		color:#c3c3c3;
-		i{
-			border-color:#c3c3c3;
-			-webkit-transition:all .5s;
-		}
-		&.active{
-			color: $primary-color;
-			i{
-				background: $primary-color;
-				color: white;
-				border-color:$primary-color;
-			}
-		}
-		&:hover:not(.active){
 
-			//color:#777777;
-			i{
-				-webkit-transform:scale(1.1);
-				//border-color:#777777;
-			}
-		}
-		
-	}
-	
+.chart-numbers {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    width: 290px;
+    text-align: center;
+    top: 70px;
+    font-size: rem-calc(14);
+    .si-number {
+        color: #BA2D0B;
+    }
+    .pi-number {
+        color: $primary-color;
+        margin-bottom: -10px;
+    }
+    span {
+        font-family: "Bebas Neue", "bebas-neue";
+        display: block;
+        font-size: 50px;
+        margin-bottom: -20px;
+    }
+}
+
+.icon-grid {
+    text-align: center;
+    i {
+        font-size: 40px;
+        display: block;
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        border: 1px solid $primary-color;
+        border-radius: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        border-color: #c3c3c3;
+        -webkit-transition: all .5s;
+    }
+    a {
+        -webkit-transition: all .3s;
+        color: #c3c3c3;
+        &.active {
+            color: $primary-color;
+            i {
+                background: $primary-color;
+                color: white;
+                border-color: $primary-color;
+            }
+        }
+        &:hover:not(.active) {
+            //color:#777777;
+            i {
+                -webkit-transform: scale(1.1);
+                //border-color:#777777;
+           
+            }
+        }
+    }
+}
+
+@media #{$medium-up} {
+    .icon-grid {
+        li {
+            margin-bottom: 0;
+        }
+    }
+    .icon-chart {
+        .increase_charts {
+            margin-top: rem-calc(40);
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media #{$large-up} {
+    .icon-chart {
+        #si_chart {
+            left: 50px;
+            top: 50px;
+            width: 75% !important;
+            height: 75% !important;
+        }
+        #pi_chart {
+            left: 00px;
+            top: 0px;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .increase_charts {
+            height: 400px;
+            width: 400px;
+            margin-top: 0;
+        }
+    }
+    .icon-grid{
+    	margin-top: rem-calc(20);
+    }
+    .chart-numbers {
+        width: 400px;
+        top: 100px;
+        font-size: rem-calc(16);
+        .pi-number {
+            margin-bottom: -10px;
+        }
+        span {
+            font-size: 60px;
+            margin-bottom: -20px;
+        }
+    }
 }
