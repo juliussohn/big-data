@@ -7,6 +7,13 @@ footer{
 			font-size: rem-calc(22);
 		}
 	}
+	section{
+		-webkit-transition:all .8s;
+		opacity: 1;
+	}
+	section.reveal{
+		background-color:rgba(0,0,0,0) !important; 
+	}
 } 
 
 @media #{$medium-up} {

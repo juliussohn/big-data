@@ -280,5 +280,9 @@ function createCanvas() {
       slidesToShow:5
     });
     $(document).foundation();
+    $(".easteregg").click(function(){
+        $('#myModal').foundation('reveal', 'open', '/modal.html');
+    })
+    
 
 };
