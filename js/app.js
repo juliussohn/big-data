@@ -274,6 +274,11 @@ function createCanvas() {
             //mousePosition.y = canvas.height / 2;
         }
     });
+    $(".carousel").slick({
+      dots: false,
+      speed: 500,
+      slidesToShow:5
+    });
     $(document).foundation();
 
 };
