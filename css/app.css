@@ -7220,11 +7220,16 @@ a.button {
   width: 150px; }
   a.button.scale {
     width: 300px; }
-  a.button.scale:hover {
+  a.button.scale:hover:not(.disabled) {
     -webkit-transform: scale(1.2) rotate(10deg); }
-  a.button:hover {
-    background: #D1340D;
+  a.button:hover:not(.disabled) {
+    background-color: #D1340D;
     color: white; }
   a.button.active {
     background: #D1340D;
     color: white; }
+  a.button.disabled {
+    width: 300px;
+    opacity: 1;
+    background: #452B34 !important;
+    border: 1px solid #452B34 !important; }
