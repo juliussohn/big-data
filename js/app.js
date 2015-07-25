@@ -276,7 +276,7 @@ function createCanvas() {
     });
 
     $(".easteregg").click(function(){
-        $('#myModal').foundation('reveal', 'open', '/modal.html');
+        $('#myModal').foundation('reveal', 'open', 'modal.html');
     })
     var audioElement=false
     $(".party").click(function(){   
