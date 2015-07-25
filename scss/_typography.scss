@@ -54,12 +54,7 @@ a.button{
 		-webkit-transform:scale(1.2) rotate(10deg);
 		
 	}
-	&.disabled{
-		opacity: 1;
-		background: #452B34 !important;
-		border: 1px solid #452B34 !important;
-		
-	}
+
 	&:hover:not(.disabled){
 		background-color: $secondary-color;
 		//border-color:$primary-color;
@@ -69,5 +64,11 @@ a.button{
 		background: $secondary-color;
 		//border-color:$primary-color;
 		color:white;
+	}
+		&.disabled{
+		opacity: 1;
+		background: #452B34 !important;
+		border: 1px solid #452B34 !important;
+		
 	}
 }
