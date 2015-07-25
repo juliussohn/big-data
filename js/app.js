@@ -289,9 +289,12 @@ function createCanvas() {
                 $.get();
 
                 audioElement.addEventListener("load", function() {
-                    audioElement.play();
+                  alert("test")
 
                 }, true);
+                 audioElement.addEventListener("oncanplaythrough", function() {
+                        alert("hi")
+                }, false);
                 $(this).html('Pause');
                 $(this).addClass('active');
                 $(this).removeClass('scale');
