@@ -288,14 +288,15 @@ function createCanvas() {
                 $(this).html('Lade Musik ...');
                 $(this).addClass('disabled');
                  btn.addClass('active');
+                 btn.removeClass('scale');
+                 $(".player_wrapper").slideDown();
                 $.get();
 
                 audioElement.addEventListener("loadeddata", function() {
-                  btn.html('pause');
-                 
-                  btn.removeClass('scale');
+                  btn.html('Pause');
+  
                   btn.removeClass('disabled');
-                  $(".player_wrapper").slideDown();
+                  
 
                 }, true);
 
