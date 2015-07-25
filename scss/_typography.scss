@@ -50,12 +50,18 @@ a.button{
 	&.scale{
 		width: 300px;
 	}
-	&.scale:hover{
+	&.scale:hover:not(.disabled){
 		-webkit-transform:scale(1.2) rotate(10deg);
 		
 	}
-	&:hover{
-		background: $secondary-color;
+	&.disabled{
+		opacity: 1;
+		background: #452B34 !important;
+		border: 1px solid #452B34 !important;
+		
+	}
+	&:hover:not(.disabled){
+		background-color: $secondary-color;
 		//border-color:$primary-color;
 		color:white;
 	}

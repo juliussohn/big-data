@@ -279,27 +279,27 @@ function createCanvas() {
         $('#myModal').foundation('reveal', 'open', '/modal.html');
     })
     var audioElement=false
-    $(".party").click(function(){
-
+    $(".party").click(function(){   
+            var btn = $(this)
             if(!audioElement){
                 audioElement = document.createElement('audio');
                 audioElement.setAttribute('src', 'mp3/miami.mp3');
                 audioElement.setAttribute('autoplay', 'autoplay');
-
+                $(this).html('Lade Musik ...');
+                $(this).addClass('disabled');
                 $.get();
 
-                audioElement.addEventListener("load", function() {
-                  alert("test")
+                audioElement.addEventListener("loadeddata", function() {
+                  btn.html('pause');
+                  btn.addClass('active');
+                  btn.removeClass('scale');
+                  btn.removeClass('disabled');
+                  $(".player_wrapper").slideDown();
 
                 }, true);
-                 audioElement.addEventListener("oncanplaythrough", function() {
-                        alert("hi")
-                }, false);
-                $(this).html('Pause');
-                $(this).addClass('active');
-                $(this).removeClass('scale');
+
                 var timer = setInterval(update_progress, 20);
-                $(".player_wrapper").slideDown();
+                
                 audioElement.addEventListener('ended', function() {
                     this.currentTime = 0;
                     this.play();
