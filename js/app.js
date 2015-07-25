@@ -274,15 +274,63 @@ function createCanvas() {
             //mousePosition.y = canvas.height / 2;
         }
     });
-    $(".carousel").slick({
-      dots: false,
-      speed: 500,
-      slidesToShow:5
-    });
-    $(document).foundation();
+
     $(".easteregg").click(function(){
         $('#myModal').foundation('reveal', 'open', '/modal.html');
     })
+    var audioElement=false
+    $(".party").click(function(){
+
+            if(!audioElement){
+                audioElement = document.createElement('audio');
+                audioElement.setAttribute('src', '/mp3/miami.mp3');
+                audioElement.setAttribute('autoplay', 'autoplay');
+
+                $.get();
+
+                audioElement.addEventListener("load", function() {
+                    audioElement.play();
+
+                }, true);
+                $(this).html('Pause');
+                $(this).addClass('active');
+                $(this).removeClass('scale');
+                var timer = setInterval(update_progress, 20);
+                $(".player_wrapper").slideDown();
+                audioElement.addEventListener('ended', function() {
+                    this.currentTime = 0;
+                    this.play();
+                }, false);
+
+            }else{
+                
+                if(!audioElement.paused){
+                    audioElement.pause()
+                    $(this).html('Play');
+                }else{
+                    audioElement.play()
+                    $(this).html('Pause');
+                }
+                
+            }
+            function update_progress() {
+                  var track_length = audioElement.duration,
+                    track_current = audioElement.currentTime,
+                    percent = percent = (track_current/track_length)*100;
+                    $(".player_progress_bar").width(percent+"%");
+                }
+            
+    })
+    $(".player_wrapper").click(function(e){
+        var mouse_x = e.pageX,
+            width = $(document).width(),
+            perc = (mouse_x/width)
+            length = audioElement.duration,
+            play_target = length*perc;
+            audioElement.currentTime = play_target
+    })
+    
+    $(document).foundation();
     
 
 };

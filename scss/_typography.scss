@@ -36,6 +36,32 @@ p+ul{
 			content:"";
 			-webkit-transition:all .3s;
 		}
+ 
+	}
+}
 
+a.button{
+	background: none;
+	border: 1px solid $secondary-color;
+	color:$secondary-color;
+	text-transform: uppercase;
+	-webkit-transition:all .3s;
+	width: 150px;
+	&.scale{
+		width: 300px;
+	}
+	&.scale:hover{
+		-webkit-transform:scale(1.2) rotate(10deg);
+		
+	}
+	&:hover{
+		background: $secondary-color;
+		//border-color:$primary-color;
+		color:white;
+	}
+	&.active{
+		background: $secondary-color;
+		//border-color:$primary-color;
+		color:white;
 	}
 }
