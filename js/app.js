@@ -287,11 +287,12 @@ function createCanvas() {
                 audioElement.setAttribute('autoplay', 'autoplay');
                 $(this).html('Lade Musik ...');
                 $(this).addClass('disabled');
+                 btn.addClass('active');
                 $.get();
 
                 audioElement.addEventListener("loadeddata", function() {
                   btn.html('pause');
-                  btn.addClass('active');
+                 
                   btn.removeClass('scale');
                   btn.removeClass('disabled');
                   $(".player_wrapper").slideDown();
