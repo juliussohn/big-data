@@ -283,7 +283,7 @@ function createCanvas() {
 
             if(!audioElement){
                 audioElement = document.createElement('audio');
-                audioElement.setAttribute('src', '/mp3/miami.mp3');
+                audioElement.setAttribute('src', 'mp3/miami.mp3');
                 audioElement.setAttribute('autoplay', 'autoplay');
 
                 $.get();
