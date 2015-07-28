@@ -17,7 +17,9 @@ nav.top-bar {
     margin-top: 10px;
     li {
         position: relative;
+        background: transparent;
         a {
+            background: transparent;
             letter-spacing: 2px;
             -webkit-transition: all .4s ease-out;
         }

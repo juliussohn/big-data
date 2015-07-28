@@ -92,90 +92,7 @@ function createIconChart() {
     })
     $(".icon-chart a.first").trigger("click");
 }
-/*
-function createGrowthChart() {
-    var ctx = $("#growth-chart").get(0).getContext("2d"),
-        options = {
-            responsive:true,
-            maintainAspectRatio: true,
-            scaleFontFamily: "Proxima Nova, Helvetica, sans-serif",
-            scaleFontSize: 14,
-            // String - Scale label font weight style
-            scaleFontStyle: "bold",
 
-            // String - Scale label font colour
-            scaleFontColor: "#fff",
-            showTooltips: false,
-            scaleOverride: true,
-            scaleSteps: 10,
-
-            scaleStepWidth: 10000/10,
-            scaleStartValue: 0,
-            scaleShowVerticalGridLines : false,
-            scaleLineColor: "#2E3C55",
-            pointDot : true,
-            datasetStroke : true,
-            datasetFill : false,
-            pointDotRadius :10,
-            pointDotStrokeWidth : 5,
-            datasetStrokeWidth : 5,
-
-        };
-    var growth_data = [{
-        label: "Sensoren & Geräte",
-        fillColor: color_2,
-        strokeColor: color_2,
-        pointColor: "#292f45",
-        pointStrokeColor: color_2,
-        data: [2000, 2950, 3000, 5500, 6900, 9500]
-    }, {
-        label: "Soziale Medien",
-        fillColor: "green",
-        strokeColor: "red(220,220,220,1)",
-        data: [2000, 2585, 2940, 3065, 4960, 6625]
-    }, {
-        label: "VoiP",
-        fillColor: "blue",
-        strokeColor: "rgba(220,220,220,1)",
-        data: [2000, 2000, 2340, 2465, 3860, 4125]
-    }, {
-        label: "Unternehmensdaten",
-        fillColor: "yellow",
-        strokeColor: "rgba(220,220,220,1)",
-        data: [2000, 2055, 2420, 2495, 2880, 3370]
-    }]
-     data = {
-            labels: ["2010", "2011", "2012", "2013", "2014", "2015"],
-            datasets: [growth_data[0] ]  
-    };
-    var growth_chart = new Chart(ctx).Line(data, options);
-
-     $('#growth-slider').on('change.fndtn.slider', function(){
-        var dataset = $('#growth-slider').attr('data-slider');
-        for(var i = 0; i<growth_chart.datasets[0].points.length; i++){
-
-            growth_chart.datasets[0].points[i].value = growth_data[dataset].data[i];
-            growth_chart.datasets[0].fillColor = growth_data[dataset].fillColor;
-        }
-       ///growth_chart.datasets[0].points[0] = 0;
-        growth_chart.update();
-    });
-
-    $(".growth-button").click(function(){   
-        $(".growth-button").removeClass("active");
-        $(this).addClass("active");
-        var dataset = parseInt($(this).data("dataset"))       
-        for(var i = 0; i<growth_chart.datasets[0].points.length; i++){
-
-            growth_chart.datasets[0].points[i].value = growth_data[dataset].data[i];
-            growth_chart.datasets[0].fillColor = growth_data[dataset].fillColor;
-        }
-       ///growth_chart.datasets[0].points[0] = 0;
-        growth_chart.update();
-
-    })
-}
-*/
 /**
  *   interactive header mesh animation
  **/
@@ -267,7 +184,7 @@ function createCanvas() {
     idle = setInterval(createDots, 1000 / 30);
     $(canvas).on('mousemove mouseleave click', function(e) {
         if (e.type == 'mousemove' || e.type == 'click') {
-            mousePosition.x = e.pageX;
+            mousePosition.x = e.pageX+400;
             mousePosition.y = e.pageY;
         }
         if (e.type == 'mouseleave') {
@@ -281,8 +198,17 @@ function createCanvas() {
     })
     var audioElement=false
     $(".party").click(function(){   
+            bounce =function(enable){
+                if(enable == true){
+                    $("body").addClass("bounce");
+                }else{
+                    $("body").removeClass("bounce");
+                }
+
+            }
             var btn = $(this)
             if(!audioElement){
+                
                 audioElement = document.createElement('audio');
                 audioElement.setAttribute('src', 'mp3/miami.mp3');
                 audioElement.setAttribute('autoplay', 'autoplay');
@@ -295,7 +221,7 @@ function createCanvas() {
 
                 audioElement.addEventListener("loadeddata", function() {
                   btn.html('Pause');
-  
+                bounce(true);
                   btn.removeClass('disabled');
                   
 
@@ -311,10 +237,12 @@ function createCanvas() {
             }else{
                 
                 if(!audioElement.paused){
-                    audioElement.pause()
+                    audioElement.pause();
+                    bounce(false);
                     $(this).html('Play');
                 }else{
-                    audioElement.play()
+                    audioElement.play();
+                    bounce(true);
                     $(this).html('Pause');
                 }
                 

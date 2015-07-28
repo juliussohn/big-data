@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 options: {
-                    outputStyle: 'uncompressed'
+                    outputStyle: 'compressed'
                 },
                 files: {
                     'css/app.css': 'scss/app.scss'
@@ -20,13 +20,19 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: ['sass'/*,'autoprefixer'*/],
-                
+                tasks: ['sass' ,'autoprefixer' ],
             },
             options: {
-      livereload: true,
-    },
-       
+                livereload: true,
+            },
+        },
+        uglify: {
+            my_target: {
+                files: {
+                    'js/libs.min.js': ['js/libs.js'],
+                    'js/app.min.js': ['js/app.js'],
+                }
+            }
         },
         bower_concat: {
             all: {
@@ -36,16 +42,19 @@ module.exports = function(grunt) {
                     'foundation': 'jquery',
                 },
                 mainFiles: {
-                    'foundation': 'js/foundation.js',
+                    'foundation': ['js/foundation/foundation.js', 'js/foundation/foundation.maggelan.js', 'js/foundation/foundation.reveal.js', 'js/foundation/foundation.topbar.js'],
                     'navicon-transformicons': 'css/style.css',
-                    'radios-to-slider': ['css/radios-to-slider.css','js/jquery.radios-to-slider.min.js'],
+                    'radios-to-slider': ['css/radios-to-slider.css', 'js/jquery.radios-to-slider.min.js'],
                 }
             }
         }
     });
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bower-concat');
-    grunt.registerTask('build', ['sass']);
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.registerTask('build', ['bower_concat', 'uglify', 'sass']);
     grunt.registerTask('default', ['build', 'watch']);
 }
