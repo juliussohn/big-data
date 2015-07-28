@@ -40,15 +40,8 @@ p + ol {
         padding: rem-calc(10 30 10  55);
         font-size: 1em;
         letter-spacing: 1px;
-        line-height: 2rem;
-	position: relative;
-        //margin-bottom: rem-calc(7);
-        /*&:nth-child(odd){
-			background: #262B3F;
-        }
-        &:nth-child(even){
-			background: #292f45;
-        }*/
+        line-height: 1.6rem;
+		position: relative;     
         &:before {
         	position: absolute;
         	display: inline-block;
@@ -63,19 +56,6 @@ p + ol {
 			font-weight: $header-font-weight;
 
 		}
-        /*&:before {
-            position: absolute;
-            display: inline-block;
-            height: 10px;
-            width: 10px;
-            border-radius: 100%;
-            margin-right: 7px;
-            background: $primary-color;
-            left: 0;
-            top: 8px;
-            content: "";
-            -webkit-transition: all .3s;
-        }*/
     }
 }
 
@@ -99,7 +79,6 @@ a.button {
     }
     &.active {
         background: $secondary-color;
-        //border-color:$primary-color;
         color: white;
     }
     &.disabled {
