@@ -6348,7 +6348,8 @@ footer section.reveal {
     font-size: 7.5rem;
     margin-bottom: 0; }
     footer h2.subheader {
-      font-size: 4.375rem; } }
+      font-size: 4.375rem;
+      margin-top: -2.5rem; } }
 
 section.content {
   padding: 6.25rem 0; }
