@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     'foundation': 'jquery',
                 },
                 mainFiles: {
-                    'foundation': ['js/foundation/foundation.js', 'js/foundation/foundation.maggelan.js', 'js/foundation/foundation.reveal.js', 'js/foundation/foundation.topbar.js'],
+                    'foundation': ['js/foundation/foundation.js', 'js/foundation/foundation.magellan.js', 'js/foundation/foundation.reveal.js', 'js/foundation/foundation.topbar.js'],
                     'navicon-transformicons': 'css/style.css',
                     'radios-to-slider': ['css/radios-to-slider.css', 'js/jquery.radios-to-slider.min.js'],
                 }
