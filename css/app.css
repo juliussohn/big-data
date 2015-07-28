@@ -4595,8 +4595,8 @@ meta.foundation-mq-topbar {
   .top-bar .button, .top-bar button {
     font-size: 0.75rem;
     margin-bottom: 0;
-    padding-bottom: .4125rem;
-    padding-top: .4125rem; }
+    padding-bottom: 0.4125rem;
+    padding-top: 0.4125rem; }
     @media only screen and (max-width: 40em) {
       .top-bar .button, .top-bar button {
         position: relative;
@@ -5273,7 +5273,7 @@ h2 {
   font-size: 3.625rem; }
 
 h3 {
-  font-size: 1.375rem; }
+  font-size: 1.5625rem; }
 
 h4 {
   font-size: 1.125rem; }
@@ -5286,7 +5286,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #3B5978;
+  color: #4D7EA8;
   font-weight: 600;
   margin-top: -3.125rem;
   margin-bottom: 1.25rem; }
@@ -5449,7 +5449,7 @@ blockquote p {
   h2 {
     font-size: 5.5rem; }
   h3 {
-    font-size: 1.6875rem; }
+    font-size: 1.875rem; }
   h4 {
     font-size: 1.4375rem; }
   h5 {
@@ -7182,11 +7182,17 @@ i {
 * {
   -webkit-font-smoothing: antialiased; }
 
-h3 {
+h1, h2, h3 {
   letter-spacing: 1px; }
 
 h2.subheader {
   font-size: 1.875rem; }
+
+h3 {
+  color: #4D7EA8;
+  letter-spacing: 1px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem; }
 
 p {
   color: white;
@@ -7208,7 +7214,7 @@ p + ul {
       width: 10px;
       border-radius: 100%;
       margin-right: 7px;
-      border: 2px solid #D1340D;
+      background: #4D7EA8;
       left: 0;
       top: 7px;
       content: "";
@@ -7236,3 +7242,19 @@ a.button {
     opacity: 1;
     background: #452B34 !important;
     border: 1px solid #452B34 !important; }
+
+.number-facts {
+  text-align: center;
+  font-family: "Bebas Neue", "bebas-neue", Helvetica, sans-serif;
+  font-weight: 600; }
+  .number-facts .number {
+    font-size: 3.3rem;
+    color: white; }
+    .number-facts .number span {
+      font-size: 4.4rem; }
+  .number-facts .fact {
+    color: #4D7EA8;
+    font-size: 1.5rem;
+    margin-top: -1.875rem; }
+  .number-facts li {
+    margin: 1.875rem 0; }

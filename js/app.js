@@ -8,7 +8,7 @@ $(document).ready(function() {
         resizeWindow();
     })
     createIconChart();
-    createGrowthChart();
+    //createGrowthChart();
     data_counter = setInterval(dataCounter, 1000 / 15);
     $(".toggle-menu a").click(function(e) {
         e.preventDefault();
@@ -92,7 +92,7 @@ function createIconChart() {
     })
     $(".icon-chart a.first").trigger("click");
 }
-
+/*
 function createGrowthChart() {
     var ctx = $("#growth-chart").get(0).getContext("2d"),
         options = {
@@ -175,6 +175,7 @@ function createGrowthChart() {
 
     })
 }
+*/
 /**
  *   interactive header mesh animation
  **/
