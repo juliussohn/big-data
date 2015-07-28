@@ -4595,8 +4595,8 @@ meta.foundation-mq-topbar {
   .top-bar .button, .top-bar button {
     font-size: 0.75rem;
     margin-bottom: 0;
-    padding-bottom: 0.4125rem;
-    padding-top: 0.4125rem; }
+    padding-bottom: .4125rem;
+    padding-top: .4125rem; }
     @media only screen and (max-width: 40em) {
       .top-bar .button, .top-bar button {
         position: relative;
@@ -7181,6 +7181,9 @@ i {
 
 * {
   -webkit-font-smoothing: antialiased; }
+
+h3 {
+  letter-spacing: 1px; }
 
 h2.subheader {
   font-size: 1.875rem; }
