@@ -8,7 +8,6 @@ $(document).ready(function() {
         resizeWindow();
     })
     createIconChart();
-    //createGrowthChart();
     data_counter = setInterval(dataCounter, 1000 / 15);
     $(".toggle-menu a").click(function(e) {
         e.preventDefault();

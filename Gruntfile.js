@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: ['sass' ,'autoprefixer' ],
+                tasks: ['sass' ],
             },
             options: {
                 livereload: true,
@@ -53,8 +53,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-bower-concat');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.registerTask('build', ['bower_concat', 'uglify', 'sass']);
     grunt.registerTask('default', ['build', 'watch']);
 }

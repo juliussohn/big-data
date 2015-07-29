@@ -1,6 +1,6 @@
 {
-  "name": "foundation-libsass-template",
-  "version": "0.0.1",
+  "name": "big-data",
+  "version": "1.0.1",
   "devDependencies": {
     "foundation": "^4.2.1-1",
     "grunt": "~0.4.5",
